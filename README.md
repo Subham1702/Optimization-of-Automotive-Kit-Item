@@ -7,7 +7,7 @@ Automotive Manufacturer is facing difficulty in effectively sourcing and providi
 I gathered research papers and relevant datasets related to our problem. I conducted Exploratory Data Analysis (EDA) using MySQL and Python on a secondary dataset provided by the client to gain initial insights. The data included customer, order and vehicle details followed by the target variable ‘Kit Item’. Then, I cleaned the raw data using MySQL and Python, and performed Graphical Representation before visualizing it in Power BI. Additionally, I utilized Looker Studio to create interactive dashboards.
 
 ### EDA and Data-Preprocessing:
-```#### MySQL code
+```MySQL code
 CREATE DATABASE IF NOT EXISTS Automotive_db;
 use Automotive_db;
 drop table A_data;
@@ -328,7 +328,7 @@ select distinct(product_type) from c_data WHERE cust_name = 'Customer_50';     #
 select count(distinct(kit_item)) from c_data WHERE cust_name = 'Customer_50';  #1
 ```
 
- ```#### Python code
+ ```Python code
 import numpy as np
 import matplotlib.pyplot as plt
 import pandas as pd
