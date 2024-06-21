@@ -12,7 +12,7 @@ I gathered research papers and relevant datasets related to our problem. I condu
  Looker Studio. 
 
 ### 2. For EDA and Data Preprocessing:
- Python: NumPy, Pandas, Matplotlib, Seaborn. 
+ Python: NumPy, Pandas, Matplotlib, Seaborn, AutoViz and SweetViz.
  MySQL. 
 
 ## Business Benefits: 
