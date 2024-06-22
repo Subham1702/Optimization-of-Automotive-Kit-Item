@@ -551,6 +551,9 @@ plt.show()
 #### Using Power BI
 ![alt text](https://github.com/Subham1702/Optimization-of-Automotive-Kit-Item/raw/main/Screenshot%20(329).png)
 
+#### Using Looker Studio
+![alt text](https://github.com/Subham1702/Optimization-of-Automotive-Kit-Item/raw/main/Screenshot%20(330).png)
+
 ## Business Benefits: 
  Minimize the delayed delivery of Kit by at least 10%.
  Increase the revenue by at least 20 lacs INR by reducing the delivery delay rate.
