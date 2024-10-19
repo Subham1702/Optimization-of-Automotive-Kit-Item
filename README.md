@@ -561,6 +561,6 @@ plt.show()
 ### Using Power BI
 ![alt text](https://github.com/Subham1702/Optimization-of-Automotive-Kit-Item/raw/main/Screenshot%20(329).png)
 
-#### Using Looker Studio
+### Using Looker Studio
 ![alt text](https://github.com/Subham1702/Optimization-of-Automotive-Kit-Item/raw/main/Screenshot%20(330).png)
 
