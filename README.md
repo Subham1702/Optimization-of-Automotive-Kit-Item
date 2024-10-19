@@ -1,13 +1,26 @@
 # Optimization-of-Automotive-Kit-Item
 
-## Business Problem:
-Automotive Manufacturer is facing difficulty in effectively sourcing and providing unique Kit Items (Automotive parts) from various vendors to meet customer demands.
+## Project Description: -
+### Business Problem:
+Automotive Manufacturers are facing difficulty in effectively sourcing and providing unique Kit Items (Automotive parts) from various vendors to meet customer demands.
+### Business Objective: 
+To maximize effective Kit-item delivery.
+### Business Constraint: 
+To maximize supply consistency.
+### Business Success Criteria: 
+To minimize the delayed delivery of kit items by at least 10%.
+### Economic Success Criteria: 
+To increase the revenue by at least 20 lacs INR.
 
-## Business Solution:
-I gathered research papers and relevant datasets related to our problem. I conducted Exploratory Data Analysis (EDA) using MySQL and Python on a secondary dataset provided by the client to gain initial insights. The data included customer, order and vehicle details followed by the target variable ‘Kit Item’. Then, I cleaned the raw data using MySQL and Python, and performed Graphical Representation before visualizing it in Power BI. Additionally, I utilized Looker Studio to create interactive dashboards.
+## Data Understanding:
+Data Dimension = 308 records, 42 attributes.
 
-### EDA and Data-Preprocessing:
-```MySQL code
+## Exploratory Data Analysis(EDA) & Data Preprocessing:
+
+<details>
+  <summary>EDA using MySQL</summary>
+
+  ```SQL
 CREATE DATABASE IF NOT EXISTS Automotive_db;
 use Automotive_db;
 drop table A_data;
@@ -327,9 +340,12 @@ select distinct(OEM) from c_data WHERE cust_name = 'Customer_50';  # manufacture
 select distinct(product_type) from c_data WHERE cust_name = 'Customer_50';     # Electronics
 select count(distinct(kit_item)) from c_data WHERE cust_name = 'Customer_50';  #1
 ```
-
- ```Python code
-import numpy as np
+</details>
+<details>
+  <summary>EDA using Python</summary>
+	
+  ```Python
+	import numpy as np
 import matplotlib.pyplot as plt
 import pandas as pd
 
@@ -537,7 +553,8 @@ for var, ax in zip(categorical_vars, axes.flatten()):
 
 plt.tight_layout()
 plt.show()
-```
+  ```  
+</details>
 
 ## Technology Stack: 
 ### 1. For Data Visualization: 
