@@ -564,3 +564,11 @@ plt.show()
 ### Using Looker Studio
 ![alt text](https://github.com/Subham1702/Optimization-of-Automotive-Kit-Item/raw/main/Screenshot%20(330).png)
 
+## Insights from the Data Analysis:
+The dataset includes:
+1) 76 customers.
+2) 292 Kit-Items.
+3) 69 Manufacturers.
+### Statistical Insights: -
+1) Demand and Sales trends over time.
+   
