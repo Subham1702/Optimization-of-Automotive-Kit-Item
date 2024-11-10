@@ -571,4 +571,15 @@ The dataset includes:
 3) 69 Manufacturers.
 ### Statistical Insights: -
 1) Demand and Sales trends over time.
-   
+   ![alt text](https://github.com/Subham1702/Optimization-of-Automotive-Kit-Item/blob/main/Demand%20And%20Sales%20Trends%20Over%20Time.png)
+   - Seasonal Demand and Inventory Optimization: Clear peaks and troughs in demand suggest seasonal or cyclical trends. Recognizing high-demand periods allows the company to optimize inventory and resource planning, preparing for potential order surges.
+   - Supply Gaps and Fulfillment Improvement: Periods where sales fall short of demand indicate supply chain bottlenecks, missed sales opportunities, or unmet demand. Addressing these gaps through better forecasting and supplier coordination could enhance sales consistency and customer satisfaction.
+  
+
+
+
+
+
+
+
+    
