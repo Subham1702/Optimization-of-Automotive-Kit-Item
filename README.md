@@ -571,15 +571,60 @@ The dataset includes:
 3) 69 Manufacturers.
 ### Statistical Insights: -
 1) Demand and Sales trends over time.
+```Python
+plt.figure(figsize=(12, 6))
+plt.plot(time_trend.index, time_trend['Total'], label='Total Ordered Quantity', linewidth=2)
+plt.plot(time_trend.index, time_trend['parts_sold'], label='Parts Sold', linewidth=2)
+plt.title('Demand and Sales Trends Over Time')
+plt.xlabel('Date')
+plt.ylabel('Quantity')
+plt.legend()
+plt.show()	
+```  
    ![alt text](https://github.com/Subham1702/Optimization-of-Automotive-Kit-Item/blob/main/Demand%20And%20Sales%20Trends%20Over%20Time.png)
    - Seasonal Demand and Inventory Optimization: Clear peaks and troughs in demand suggest seasonal or cyclical trends. Recognizing high-demand periods allows the company to optimize inventory and resource planning, preparing for potential order surges.
    - Supply Gaps and Fulfillment Improvement: Periods where sales fall short of demand indicate supply chain bottlenecks, missed sales opportunities, or unmet demand. Addressing these gaps through better forecasting and supplier coordination could enhance sales consistency and customer satisfaction.
-  
 
+2) Top Kit Items With Highest Average Delay.
+```Python
+top_kit_items_delay = kit_item_delay_trends_sorted.head(10)
+plt.figure(figsize=(12, 6))
+plt.barh(top_kit_items_delay['KIT ITEM'], top_kit_items_delay['avg_delay'], color='skyblue')
+plt.xlabel('Average Delay')
+plt.ylabel('Kit Item')
+plt.title('Top Kit Items with Highest Average Delay')
+plt.gca().invert_yaxis()
+plt.show()
+```     
+   ![alt text](https://github.com/Subham1702/Optimization-of-Automotive-Kit-Item/blob/main/Top%20Kit%20Items%20With%20Highest%20Average%20Delay.png)
+   - High Delay Concentration in Specific Items: Certain kit items consistently show higher average delays, such as HVAC units and gear shift levers, indicating recurring challenges in sourcing or manufacturing these products.
+   - Potential Bottlenecks in High-Demand Parts: The frequent delays in critical components, like engine and transmission parts, suggest these items could be key bottlenecks, impacting overall delivery efficiency and customer satisfaction if not addressed.
 
+3) Top Manufacturers By Delay Frequency.
+```Python
+top_manufacturers_delay = manufacturer_performance.nlargest(10, 'delay_frequency')
+plt.figure(figsize=(12, 6))
+plt.barh(top_manufacturers_delay['OEM'], top_manufacturers_delay['delay_frequency'], color='salmon')
+plt.xlabel('Delay Frequency')
+plt.ylabel('Manufacturer')
+plt.title('Top Manufacturers by Delay Frequency')
+plt.gca().invert_yaxis()
+plt.show()
+``` 
+   ![alt text](https://github.com/Subham1702/Optimization-of-Automotive-Kit-Item/blob/main/Top%20Manufacturers%20By%20Delay%20Frequency.png)
+   - Consistent Delays Among Key Manufacturers: A few manufacturers show a high frequency of delays, indicating they may struggle with reliability or capacity issues, which could be impacting overall supply chain efficiency.
+   - Targeted Supplier Improvement Opportunities: By addressing delays with these specific manufacturers, the company could significantly reduce overall delivery delays, leading to improved supply consistency and better alignment with demand.
 
+### Business Insights: -
+1) Supply Chain Gaps:
+  - High Delay Frequency by Key Manufacturers: Certain manufacturers are frequently associated with delayed deliveries, especially for critical parts like Engine Parts and Transmission components. This could indicate issues with supplier reliability, capacity constraints, or logistics bottlenecks.
+  - Kit Items with Consistent Delays: Specific kit items, including HVAC units, gear shift levers, and stabilizer assemblies, have high average delays. These may be harder to source or require longer lead times, impacting overall fulfillment.
 
-
-
-
+2) Customer Demand and Fulfillment Trends:
+  - Fluctuating Demand: There are noticeable peaks in demand for certain items. Preparing for these demand spikes by building buffer stock or strengthening vendor relationships could reduce fulfillment delays and improve delivery consistency.
+  - Fulfillment Rate Variability: Some product types, especially those related to AC Units and Transmission systems, show lower fulfillment rates, indicating a mismatch between ordered and available stock.
+    
+3) Opportunities for Improvement:
+  - Focus on High-Impact Vendors and Kit Items: Addressing delay issues with vendors that frequently fall behind on deliveries could improve supply chain efficiency. Collaborating with these suppliers to streamline their processes or even considering alternative suppliers could help.
+  - Inventory Optimization for High-Demand Periods: Building a demand forecast model based on historical trends would help preemptively manage inventory. Strategic inventory planning can reduce stockouts and enhance delivery performance, aligning with the objective of reducing delayed deliveries by 10%.
     
